@@ -1,0 +1,78 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<!DOCTYPE generatorConfiguration-->
+<!--        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">-->
+
+<!--<generatorConfiguration>-->
+<!--    &lt;!&ndash; 引入配置文件 &ndash;&gt;-->
+<!--    &lt;!&ndash; <properties resource="application.properties"/>&ndash;&gt;-->
+
+<!--    &lt;!&ndash; 指定数据库连接驱动 &ndash;&gt;-->
+<!--    <classPathEntry location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\8.0.25\mysql-connector-java-8.0.25.jar" />-->
+
+<!--    &lt;!&ndash; 一个数据库一个context &ndash;&gt;-->
+<!--    <context id="sqlserverTables" targetRuntime="MyBatis3">-->
+<!--&lt;!&ndash;        &lt;!&ndash; 生成的pojo，将implements Serializable &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>&ndash;&gt;-->
+
+<!--        &lt;!&ndash; 注释 &ndash;&gt;-->
+<!--        <commentGenerator>-->
+<!--            <property name="suppressAllComments" value="true"/>&lt;!&ndash; 是否取消注释 &ndash;&gt;-->
+<!--            &lt;!&ndash; <property name="suppressDate" value="true" />  是否生成注释代时间戳 &ndash;&gt;-->
+<!--        </commentGenerator>-->
+
+<!--        &lt;!&ndash; 数据库链接URL、用户名、密码 &ndash;&gt;-->
+<!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"-->
+<!--                        connectionURL="jdbc:mysql://58.247.45.36:3307/glocash?useSSL=false"-->
+<!--                        userId="root"-->
+<!--                        password="367185F2E623AAB7">-->
+<!--        </jdbcConnection>-->
+
+<!--        &lt;!&ndash; 类型转换 &ndash;&gt;-->
+<!--        <javaTypeResolver>-->
+<!--            &lt;!&ndash; 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer true，把JDBC DECIMAL-->
+<!--                和 NUMERIC 类型解析为java.math.BigDecimal &ndash;&gt;-->
+<!--            <property name="forceBigDecimals" value="false"/>-->
+<!--        </javaTypeResolver>-->
+
+<!--        &lt;!&ndash; 生成model模型，对应的包路径，以及文件存放路径(targetProject)，targetProject可以指定具体的路径,如./src/main/java，-->
+<!--            也可以使用“MAVEN”来自动生成，这样生成的代码会在target/generatord-source目录下 &ndash;&gt;-->
+<!--        <javaModelGenerator targetPackage="com.glocash.glocash.entity" targetProject="./src/main/java">-->
+<!--            &lt;!&ndash; 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] &ndash;&gt;-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--            &lt;!&ndash; 从数据库返回的值被清理前后的空格 &ndash;&gt;-->
+<!--            <property name="trimStrings" value="true"/>-->
+<!--        </javaModelGenerator>-->
+
+<!--        &lt;!&ndash;对应的mapper.xml文件 &ndash;&gt;-->
+<!--        <sqlMapGenerator targetPackage="mappers" targetProject="./src/main/resources">-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--        </sqlMapGenerator>-->
+
+<!--        &lt;!&ndash; 对应的Mapper接口类文件 &ndash;&gt;-->
+<!--        <javaClientGenerator type="XMLMAPPER" targetPackage="com.glocash.glocash.dao" targetProject="./src/main/java">-->
+<!--            <property name="enableSubPackages" value="false"/>-->
+<!--        </javaClientGenerator>-->
+
+
+<!--        &lt;!&ndash; 列出要生成代码的所有表，这里配置的是不生成Example文件 &ndash;&gt;-->
+<!--        &lt;!&ndash; schema即为数据库名 tableName为对应的数据库表 domainObjectName是要生成的实体类 enable*ByExample-->
+<!--                   是否生成 example类   &ndash;&gt;-->
+<!--        &lt;!&ndash; schema="${gererator.schema}" &ndash;&gt;-->
+<!--        &lt;!&ndash; 若是数据库里有多张表 tableName="%"  再去掉 domainObjectName="Student" &ndash;&gt;-->
+<!--        <table tableName="merchant"-->
+<!--               domainObjectName="Merchant"-->
+<!--               enableCountByExample="false"-->
+<!--               enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false">-->
+<!--            &lt;!&ndash; 忽略列，不生成bean 字段-->
+<!--            <ignoreColumn column="FRED" />&ndash;&gt;-->
+<!--            &lt;!&ndash; 指定列的java数据类型-->
+<!--            <columnOverride column="LONG_VARCHAR_FIELD" jdbcType="VARCHAR" />  &ndash;&gt;-->
+<!--            &lt;!&ndash; 用于指定生成实体类时是否使用实际的列名作为实体类的属性名。false是 Camel Case风格&ndash;&gt;-->
+<!--            <property name="useActualColumnNames" value="false"/>-->
+<!--        </table>-->
+<!--    </context>-->
+<!--</generatorConfiguration>-->

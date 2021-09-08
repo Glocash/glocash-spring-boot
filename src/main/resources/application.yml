@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://58.247.45.36:3307/glocash?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 367185F2E623AAB7
+glocash:
+  mchEmail: 2101653220@qq.com
+  liveMode: true
+  debug: true
+  sandbox:
+    url: https://sandbox.glocashpayment.com
+    key: 9dc6a0682d7cb718fa140d0b8017a01c4e9a9820beeb45da020601a2e0a63514
+  live:
+    url: https://pay.glocashpayment.com
+    key: c2e38e7d93dbdd3efaa61028c3d27a1a2577df84fa62ae752df587b4f90b8ef7
