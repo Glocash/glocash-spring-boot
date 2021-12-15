@@ -66,6 +66,7 @@ public class GlocashController {
         data.put("REQ_TIMES", timestamp);    //请求时间
         data.put("REQ_INVOICE", orderNo);    //订单号
         data.put("REQ_MERCHANT", "Merchant Name"); //商户名
+        data.put("REQ_APPID", "380"); //应用ID
         data.put("CUS_EMAIL", "rongjiang.chen@witsion.com");    //客户邮箱
         data.put("BIL_METHOD", "C01");    //请求方式
         data.put("BIL_GOODSNAME", "#gold#Runescape/OSRS Old School/ 10M Gold");  //TODO 商品名称必填 而且必须是正确的否则无法结算
